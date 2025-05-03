@@ -6,6 +6,7 @@ import org.bukkit.event.Listener
 import org.bukkit.plugin.java.JavaPlugin
 import su.plo.slib.spigot.SpigotServerLib
 import su.plo.voice.paper.integration.SuperVanishIntegration
+import su.plo.voice.paper.integration.SayanVanishIntegration
 import su.plo.voice.paper.integration.VoicePlaceholder
 import su.plo.voice.server.BaseVoiceServer
 import su.plo.voice.util.version.ModrinthLoader
@@ -37,6 +38,11 @@ class PaperVoiceServer(
         // Initialize integrations
         if (Bukkit.getPluginManager().getPlugin("PlaceholderAPI") != null) {
             VoicePlaceholder(this).register()
+        }
+
+        if (Bukkit.getPluginManager().getPlugin("SayanVanish") != null) {
+            plugin.server.pluginManager.registerEvents(SayanVanishIntegration(this), plugin)
+            LOGGER.info("SayanVanish event listener attached")
         }
 
         if (Bukkit.getPluginManager().getPlugin("SuperVanish") != null ||
