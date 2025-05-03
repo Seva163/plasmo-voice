@@ -7,7 +7,7 @@ import org.bukkit.event.Listener
 import su.plo.voice.api.server.PlasmoVoiceServer
 import su.plo.voice.proto.packets.tcp.clientbound.PlayerDisconnectPacket
 
-class SuperVanishIntegration(
+class SayanVanishIntegration(
     private val voiceServer: PlasmoVoiceServer,
 ) : Listener {
 
