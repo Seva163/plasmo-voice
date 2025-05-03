@@ -13,7 +13,9 @@ class SayanVanishIntegration(
 
     @EventHandler
     fun onPlayerHide(event: BukkitUserVanishEvent) {
-        val player = voiceServer.playerManager.getPlayerById(event.getUser().getUniqueID(), true)
+        val bukkitPlayer = event.user.player()
+        if (bukkitPlayer == null) return
+        val player = voiceServer.playerManager.getPlayerByInstance(bukkitPlayer)
         if (!player.hasVoiceChat()) return
 
         voiceServer.tcpPacketManager.broadcast(
@@ -25,7 +27,9 @@ class SayanVanishIntegration(
 
     @EventHandler
     fun onPlayerShow(event: BukkitUserUnVanishEvent) {
-        val player = voiceServer.playerManager.getPlayerByInstance(event.getUser().getUniqueID(), true)
+        val bukkitPlayer = event.user.player()
+        if (bukkitPlayer == null) return
+        val player = voiceServer.playerManager.getPlayerByInstance(bukkitPlayer)
         if (!player.hasVoiceChat()) return
 
         voiceServer.tcpPacketManager.broadcastPlayerInfoUpdate(player)
