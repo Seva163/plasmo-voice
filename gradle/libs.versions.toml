@@ -53,7 +53,8 @@ config       = { module = "su.plo.config:config", version.ref = "config" }
 luckperms    = { module = "net.luckperms:api", version.ref = "luckperms" }
 papi         = { module = "me.clip:placeholderapi", version.ref = "papi" }
 supervanish = { module = "com.github.LeonMangler:SuperVanish", version.ref = "supervanish" }
-sayanvanish = { module = "org.sayandev:sayanvanish-bukkit", version.ref = "sayanvanish" }
+sayanvanish-bukkit = { module = "org.sayandev:sayanvanish-bukkit", version.ref = "sayanvanish" }
+sayanvanish-api = { module = "org.sayandev:sayanvanish-api", version.ref = "sayanvanish" }
 
 bungeecord   = { module = "net.md-5:bungeecord-api", version.ref = "bungeecord"}
 velocity     = { module = "com.velocitypowered:velocity-api", version.ref = "velocity" }

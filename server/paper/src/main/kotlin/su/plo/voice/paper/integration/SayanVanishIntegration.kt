@@ -1,7 +1,7 @@
 package su.plo.voice.paper.integration
 
-import org.sayandev.sayanvanish.bukkit.api.event.BukkitUserVanishEvent;
-import org.sayandev.sayanvanish.bukkit.api.event.BukkitUserUnVanishEvent;
+import org.sayandev.sayanvanish.bukkit.api.event.BukkitUserVanishEvent
+import org.sayandev.sayanvanish.bukkit.api.event.BukkitUserUnVanishEvent
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import su.plo.voice.api.server.PlasmoVoiceServer

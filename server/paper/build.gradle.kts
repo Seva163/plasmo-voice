@@ -17,7 +17,8 @@ dependencies {
     compileOnly(libs.paper)
     compileOnly(libs.papi)
     compileOnly(libs.supervanish)
-    compileOnly(libs.sayanvanish)
+    compileOnly(libs.sayanvanish.api)
+    compileOnly(libs.sayanvanish.bukkit)
 
     compileOnly("org.bstats:bstats-bukkit:${libs.versions.bstats.get()}")
 
